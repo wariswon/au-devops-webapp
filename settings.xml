@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>au-au-packages</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>au-au-packages</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>au-au-packages</id>
+        <url>https://au-820242923856.d.codeartifact.us-east-1.amazonaws.com/maven/au-packages/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>au-au-packages</id>
+    <name>au-au-packages</name>
+    <url>https://au-820242923856.d.codeartifact.us-east-1.amazonaws.com/maven/au-packages/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
